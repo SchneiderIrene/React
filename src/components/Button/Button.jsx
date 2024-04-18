@@ -1,11 +1,9 @@
-import './styles.css'
+import './styles.css';
 
-function Button (){
-    const sendButtonName = 'Send';
-    const getButtonName = 'Get';
-    const isGetButton = false;
+function Button({buttonName = "Get data", isPrimaryButton}) {
+    const buttonClass = ` main-button ${isPrimaryButton? 'primary-button' : 'secondary-button'}`;
 
-    return <button className='main-button'>{isGetButton?getButtonName:sendButtonName} data</button>
+  return <button className={buttonClass}>{buttonName}</button>;
 }
 
 export default Button;

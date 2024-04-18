@@ -1,0 +1,20 @@
+
+.animal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: rgba(211, 58, 160, 0.516);
+    border: 2px solid rgb(121, 30, 91);
+    border-radius: 4px;
+}
+
+.img {
+    width: 170px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px rgb(121, 30, 91);;
+}
