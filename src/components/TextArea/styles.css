@@ -1,0 +1,15 @@
+textarea {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(150, 158, 158);
+    font-size: 15px;
+    border-radius: 10px;
+    font-family: SanSerif,  serif;
+    padding: 10px;
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

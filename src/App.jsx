@@ -1,13 +1,13 @@
 
 import './App.css';
-import Lesson04 from './lessons/Lesson04/Lesson04';
+import Consultation03 from './consultations/Consultation03/Consultation03';
 
 
 function App() {
   return (
     <div className="App">
       <div>
-        <Lesson04/>
+        <Consultation03/>
       </div>
     </div>
   );
