@@ -1,6 +1,6 @@
 import './styles.css';
 
-function Input({name, type = 'text', placeholder, label}) {
+function Input({name, type = 'text', placeholder, label, onInputChange}) {
   return (
     <div className='input-component-container'>
       <label htmlFor="">{label}</label>
@@ -8,7 +8,8 @@ function Input({name, type = 'text', placeholder, label}) {
       className="input-component"
       name={name}
       type={type}
-      placeholder={placeholder} />
+      placeholder={placeholder}
+      onChange={onInputChange} />
     </div>
 
          
