@@ -8,11 +8,11 @@ function Feedback() {
     const [countDislike, setCountDislike] = useState(0);
 
     const onPlusLike = ()=> {
-        setCountLike((p) => p + 1);
+        setCountLike((prevValue) => prevValue + 1);
     }
 
     const onPlusDislike = ()=> {
-        setCountDislike((p) => p + 1);
+        setCountDislike((prevValue) => prevValue + 1);
     }
 
     const onResetResult = ()=>{
@@ -24,13 +24,13 @@ function Feedback() {
     <div className="component-container">
       <div className="button">
         <Button name='Like' onButtonClick={onPlusLike}/>
-        <Button  name={countLike}/>
-
+        <div className='counter'>{countLike}</div>
+        
       </div>
 
       <div className="button">
       <Button name='Dislike'onButtonClick={onPlusDislike}/>
-      <Button name={countDislike}/>
+      <div className='counter'>{countDislike}</div>
 
       </div>
 
