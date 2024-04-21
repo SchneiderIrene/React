@@ -10,3 +10,6 @@
     font-size: 16px;
     cursor: pointer;
   }
+  .button-component:hover {
+    background-color: #050bc8;
+  }
