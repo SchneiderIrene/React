@@ -1,0 +1,28 @@
+.products-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(7, 10, 190, 0.468);
+    gap: 30px;
+    font-size: 32px;
+    padding: 30px;
+    font-family: sans-serif;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgb(20, 7, 100);
+}
+
+.list-entry{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+p{
+   min-width: 150px;
+}
+
+.product-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

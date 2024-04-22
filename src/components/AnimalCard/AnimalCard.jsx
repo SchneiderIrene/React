@@ -1,11 +1,13 @@
 import './styles.css';
 
-function AnimalCard({ animalData, animalName, children }) {
+
+
+
+function AnimalCard({ animalData}) {
   return (
     <div className="animal-card">
-      <h2>{animalName}</h2>
+      <h2>{animalData.name}</h2>
       <p>{animalData.species}</p>
-       {children}
       <img className='img' src={animalData.image} />
      
     </div>
