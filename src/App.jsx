@@ -1,6 +1,6 @@
 
 import './App.css';
-import Consultation05 from './consultations/Consultation03/Consultation05/Consultation05';
+import Consultation05 from './consultations/Consultation05/Consultation05'
 
 
 function App() {

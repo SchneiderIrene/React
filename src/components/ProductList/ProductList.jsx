@@ -4,7 +4,7 @@ import { products } from './data';
 import Button from '../Button/Button';
 
 function ProductList() {
-  const [selectProducts, setSelectProduct] = useState([]);
+  const [chosenProducts, setChosenProducts] = useState([]);
 
   const productsArray = products.map((product) => {
     return (
@@ -16,7 +16,12 @@ function ProductList() {
             addProduct(product.id);
           }}
         />
-        <Button name="Remove" onButtonClick={() => {}} />
+        <Button
+          name="Remove"
+          onButtonClick={() => {
+            removeProduct(product.id);
+          }}
+        />
       </div>
     );
   });
@@ -25,17 +30,29 @@ function ProductList() {
     let searchedEl = products.find((product) => {
       return product.id === id;
     });
-    setSelectProduct(searchedEl);
-    console.log(searchedEl);
-    console.log(selectProducts);
+    setChosenProducts((prevProducts) => [...prevProducts, searchedEl]);
   };
+
+  const removeProduct = (id) => {
+    let  filteredProducts = chosenProducts.filter((selectedItems)=>selectedItems.id !== id)
+
+    setChosenProducts(filteredProducts)
+  };
+
+  const selectedItems = chosenProducts.map((product) => {
+    return (
+      <p key={product.id} className="list-entry">
+        {product.name}
+      </p>
+    );
+  });
 
   return (
     <div className="products-list-wrapper">
       <h4>Product List:</h4>
       <div className="product-list">{productsArray}</div>
       <h4>Selected Product:</h4>
-      <div className="selected-products"></div>
+      <div className="selected-products">{selectedItems}</div>
     </div>
   );
 }

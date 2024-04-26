@@ -1,5 +1,5 @@
 import './styles.css'
-import ProductList from '../../../components/ProductList/ProductList';
+import ProductList from '../../components/ProductList/ProductList';
 
 function Consultation05(){
     return(
